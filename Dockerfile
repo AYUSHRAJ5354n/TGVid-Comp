@@ -4,6 +4,7 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
 RUN apt -qq update && \
+    apt-get install -y ffmpeg && \
     apt-get install fontconfig -y -f
 
 COPY . .
